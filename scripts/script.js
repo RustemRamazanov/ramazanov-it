@@ -139,3 +139,146 @@ function Constellation (canvas) {
     var c = new Constellation(document.getElementById('canvas'));
     c.init();
   });
+
+
+// Табла
+
+  function readMore(){
+      let dots = document.getElementById("dots")
+      let more = document.getElementById("more")
+
+      if(dots.style.display === "none"){
+        dots.style.display="inline"
+        more.style.display="none"
+      } else{
+          dots.style.display="none"
+          more.style.display="inline"
+      }
+  }
+  function readMore1(){
+    let dots1 = document.getElementById("dots1")
+    let more1 = document.getElementById("more1")
+
+    if(dots1.style.display === "none"){
+      dots1.style.display="inline"
+      more1.style.display="none"
+    } else{
+        dots1.style.display="none"
+        more1.style.display="inline"
+    }
+}
+
+function readMore2(){
+  let dots2 = document.getElementById("dots2")
+  let more2 = document.getElementById("more2")
+
+  if(dots2.style.display === "none"){
+    dots2.style.display="inline"
+    more2.style.display="none"
+  } else{
+      dots2.style.display="none"
+      more2.style.display="inline"
+  }
+}
+function readMore3(){
+  let dots3 = document.getElementById("dots3")
+  let more3 = document.getElementById("more3")
+
+  if(dots3.style.display === "none"){
+    dots3.style.display="inline"
+    more3.style.display="none"
+  } else{
+      dots3.style.display="none"
+      more3.style.display="inline"
+  }
+}
+function readMore4(){
+  let dots4 = document.getElementById("dots4")
+  let more4 = document.getElementById("more4")
+
+  if(dots4.style.display === "none"){
+    dots4.style.display="inline"
+    more4.style.display="none"
+  } else{
+      dots4.style.display="none"
+      more4.style.display="inline"
+  }
+}
+function readMore5(){
+  let dots5 = document.getElementById("dots5")
+  let more5 = document.getElementById("more5")
+
+  if(dots5.style.display === "none"){
+    dots5.style.display="inline"
+    more5.style.display="none"
+  } else{
+      dots5.style.display="none"
+      more5.style.display="inline"
+  }
+}
+function readMore6(){
+  let dots6 = document.getElementById("dots6")
+  let more6 = document.getElementById("more6")
+
+  if(dots6.style.display === "none"){
+    dots6.style.display="inline"
+    more6.style.display="none"
+  } else{
+      dots6.style.display="none"
+      more6.style.display="inline"
+  }
+}
+function readMore7(){
+  let dots7 = document.getElementById("dots7")
+  let more7 = document.getElementById("more7")
+
+  if(dots7.style.display === "none"){
+    dots7.style.display="inline"
+    more7.style.display="none"
+  } else{
+      dots7.style.display="none"
+      more7.style.display="inline"
+  }
+}
+function readMore8(){
+  let dots8 = document.getElementById("dots8")
+  let more8 = document.getElementById("more8")
+
+  if(dots8.style.display === "none"){
+    dots8.style.display="inline"
+    more8.style.display="none"
+  } else{
+      dots8.style.display="none"
+      more8.style.display="inline"
+  }
+}
+
+
+//Слайдер:
+
+const slider = document.querySelector('.slider');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+const slides = Array.from(slider.querySelectorAll('img'));
+const slideCount = slides.length;
+let slideIndex = 0;
+
+prevButton.addEventListener('click', () => {
+  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+  slide();
+});
+
+nextButton.addEventListener('click', () => {
+  slideIndex = (slideIndex + 1) % slideCount;
+  slide();
+});
+
+const slide = () => {
+  const imageWidth = slider.clientWidth;
+  const slideOffset = -slideIndex * imageWidth;
+  slider.style.transform = `translateX(${slideOffset}px)`;
+}
+
+window.addEventListener('load', () => {
+  slide();
+});

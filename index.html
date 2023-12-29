@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="scripts/modernizr.custom.63321.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -77,27 +77,47 @@
             
         </div>
     </section>
-        <section class="container">
+    <section class="container">
             <h2>МОИ РАБОТЫ</h2>
-            <div class="cards">
-                <div class="card">
+                <section class="main">
+                    <ul id="st-stack" class="st-stack-raw">
+                        <li><div class="st-item"><a href="http://drbl.in/fgQV"><img src="images/1.jpg"/></a></div><div class="st-title"><h4>Подпись</h4></div></li>
+                        <li><div class="st-item"><a href="http://drbl.in/fpRz"><img src="images/2.jpg"/></a></div><div class="st-title"><h4>Подпись</h4></div></li>
+                        <li><div class="st-item"><a href="http://drbl.in/fGVs"><img src="images/3.jpg"/></a></div><div class="st-title"><h4>Подпись</h4></div></li>
+                        <li><div class="st-item"><a href="http://drbl.in/fgvZ"><img src="images/4.jpg"/></a></div><div class="st-title"><h4>Подпись</h4></div></li>
+                    </ul>
+                </section>
+    </section>
+
+        <div class="container">
+            <h2>Почему выбирают меня?</h2>
+            <div class="why">
+                <button id="btn" onclick="readMore()">Всегда соблюдаю сроки</button>
+                <p><span id="dots"></span><span id="more">Внезапно исчезать в неизвестном направлении и прекращать выходить на связь, если сроки горят, а работа по какой-то причине еле движется, в мои правила не входит. Называя срок выполнения работы, я всегда закладываю некоторый запас по времени на случай возникновения ситуации, делающей невозможной выполнение работы к предполагаемой мною дате. Тем не менее, от ошибок никто не застрахован. Если пойму, что ошибся с оценкой сроков, либо не рассчитал свои возможности по каким-то иным параметрам, не стану тянуть до последнего момента и сразу сообщу вам об этом.</span></p>
+                <button id="btn" onclick="readMore1()">Всегда на связи</button>
+                <p><span id="dots1"></span><span id="more1">Каждому клиенту оставляю несколько дополнительных способов оперативной связи в мессанжерах, социальных сетях и на поступившие сообщения отвечаю настолько быстро, насколько это возможно.</span></p>
+                <button id="btn" onclick="readMore2()">Всегда выбираю наиболее актуальный способ верстки</button>
+                <p><span id="dots2"></span><span id="more2">Любой шаблон можно сверстать множеством разных способов. Я выбираю такой способ, который на мой взгляд, будет наиболее оптимальным для решения конкретной задачи.  Предпочитаю писать все с нуля под каждый конкретный проект, либо использовать свои собственные наработки. Фреймворки по типу Bootstrap не применяю ввиду того, что не вижу ровным счетом никакой необходимости в этом.</span></p>
+                <button id="btn" onclick="readMore3()">Всегда проверяю валидность кода</button>
+                <p><span id="dots3"></span><span id="more3">HTML-код является "правильным" с точки зрения W3C по стандарту xHTML 1.0 Strict, либо HTML5.</span></p>
+                <button id="btn" onclick="readMore4()">Активно применяю возможности CSS</button>
+                <p><span id="dots4"></span><span id="more4">Максимально возможное использование каскадных таблиц стилей в реализации элементов дизайна.
+
+                    Активное использование наследования, дочерних и соседних селекторов, а также псевдоэлементов и, как следствие, отсутствие большого количества мусора в виде лишних классов и снижение в HTML-коде количества разметки, вводимой только для создания элементов оформления.
                     
-                </div>
-                <div class="card">
-                    
-                </div>
-                
+                    Предпочитаю обходиться минимумом классов. Любимые многими методологии по типу БЭМ использую достаточно редко и лишь там, где это действительно имеет практический смысл с моей точки зрения. В большинстве случаев, с которыми я сталкиваюсь, применение этой методологии (в полной мере) практического смысла лишено и лишь приводит к замусориванию исходного кода страницы.</span></p>
+                <button id="btn" onclick="readMore5()">Использую блочную верстку</button>
+                <p><span id="dots5"></span><span id="more5">Так называемая "верстка слоями", "верстка div-ами". Компактность HTML кода. Минимально возможное количество разметки для достижения нужного результата. А, соответственно, несколько большая скорость загрузки страниц, простота понимания разметки для программиста при адаптации под CMS ну и, в конце концов, лучшее отношение поисковых систем к сайту.</span></p>
+                <button id="btn" onclick="readMore6()">Оптимизирую графику</button>
+                <p><span id="dots6"></span><span id="more6">Ищу необходимый баланс между "весом" изображения и качеством его отображения для растровых изображений.
+                    Векторные SVG также будут максимально очищены от мусора в коде изображений, который генерируют графические редакторы.</span></p>
+                <button id="btn" onclick="readMore7()">Активно применяю JavaScript и jQuery</button>
+                <p><span id="dots7"></span><span id="more7">Для "оживления" сайта в виде различных слайдеров, всплывающих окон, аккордеонов напдобие этого и т.д. и т.п. использую либо чистый JavaScript, либо осуществляю поиск необходимых скриптов среди готовых решений jQuery, их установку и настройку.</span></p>
+                <button id="btn" onclick="readMore8()">Если в макете присутствуют нестандартные шрифты ...</button>
+                <p><span id="dots8"></span><span id="more8">Возможно подключение нестандартных шрифтов. Если шрифт платный, важно, чтобы он был вами легально приобретен. В противном случае, настоятельно рекомендую осуществить замену на любой из бесплатных, допустим, с сервиса Google Fonts.</span></p>
             </div>
-            <div class="cards">
-                <div class="card">
-                    
-                </div>
-                <div class="card">
-                    
-                </div>
-                
-            </div>
-        </section>
+           
+        </div>
             <footer class="footer">
                 <div class="footer-foto">
                     <img src="images/ava2.png" alt="ava">
@@ -121,6 +141,18 @@
                     </div>
                 </div>
             </footer>
-        
+           
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script type="text/javascript" src="scripts/jquery.stackslider.js"></script>
+            <script type="text/javascript">
+                
+                $( function() {
+                    
+                    $( '#st-stack' ).stackslider();
+    
+                });
+    
+            </script>
+            <script src="scripts/script.js"></script>
 </body>
 </html>
