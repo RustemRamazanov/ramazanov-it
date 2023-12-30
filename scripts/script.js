@@ -98,7 +98,7 @@ function Constellation (canvas) {
       }
   
       _this.animate();
-      _this.line();
+      /*_this.line();*/
     };
   
     this.setCanvas = function () {
@@ -146,139 +146,149 @@ function Constellation (canvas) {
   function readMore(){
       let dots = document.getElementById("dots")
       let more = document.getElementById("more")
+      let btn = document.getElementById("btn")
 
       if(dots.style.display === "none"){
         dots.style.display="inline"
         more.style.display="none"
+        btn.innerHTML="►  Всегда соблюдаю сроки"
       } else{
           dots.style.display="none"
           more.style.display="inline"
+          btn.innerHTML="▼  Всегда соблюдаю сроки"
       }
   }
   function readMore1(){
     let dots1 = document.getElementById("dots1")
     let more1 = document.getElementById("more1")
+    let btn1 = document.getElementById("btn1")
 
     if(dots1.style.display === "none"){
       dots1.style.display="inline"
       more1.style.display="none"
+      btn1.innerHTML="►  Всегда на связи"
     } else{
         dots1.style.display="none"
         more1.style.display="inline"
+        btn1.innerHTML="▼  Всегда на связи"
     }
 }
-
 function readMore2(){
   let dots2 = document.getElementById("dots2")
   let more2 = document.getElementById("more2")
+  let btn2 = document.getElementById("btn2")
 
   if(dots2.style.display === "none"){
     dots2.style.display="inline"
     more2.style.display="none"
+    btn2.innerHTML="►  Всегда выбираю наиболее актуальный способ верстки"
   } else{
       dots2.style.display="none"
       more2.style.display="inline"
+      btn2.innerHTML="▼  Всегда выбираю наиболее актуальный способ верстки"
   }
 }
 function readMore3(){
   let dots3 = document.getElementById("dots3")
   let more3 = document.getElementById("more3")
+  let btn3 = document.getElementById("btn3")
 
   if(dots3.style.display === "none"){
     dots3.style.display="inline"
     more3.style.display="none"
+    btn3.innerHTML="►  Всегда проверяю валидность кода"
   } else{
       dots3.style.display="none"
       more3.style.display="inline"
+      btn3.innerHTML="▼  Всегда проверяю валидность кода"
   }
 }
 function readMore4(){
   let dots4 = document.getElementById("dots4")
   let more4 = document.getElementById("more4")
+  let btn4 = document.getElementById("btn4")
 
   if(dots4.style.display === "none"){
     dots4.style.display="inline"
     more4.style.display="none"
+    btn4.innerHTML="►  Активно применяю возможности CSS"
   } else{
       dots4.style.display="none"
       more4.style.display="inline"
+      btn4.innerHTML="▼  Активно применяю возможности CSS"
   }
 }
 function readMore5(){
   let dots5 = document.getElementById("dots5")
   let more5 = document.getElementById("more5")
+  let btn5 = document.getElementById("btn5")
 
   if(dots5.style.display === "none"){
     dots5.style.display="inline"
     more5.style.display="none"
+    btn5.innerHTML="►  Использую блочную верстку"
   } else{
       dots5.style.display="none"
       more5.style.display="inline"
+      btn5.innerHTML="▼  Использую блочную верстку"
   }
 }
 function readMore6(){
   let dots6 = document.getElementById("dots6")
   let more6 = document.getElementById("more6")
+  let btn6 = document.getElementById("btn6")
 
   if(dots6.style.display === "none"){
     dots6.style.display="inline"
     more6.style.display="none"
+    btn6.innerHTML="►  Оптимизирую графику"
   } else{
       dots6.style.display="none"
       more6.style.display="inline"
+      btn6.innerHTML="►  Оптимизирую графику"
   }
 }
 function readMore7(){
   let dots7 = document.getElementById("dots7")
   let more7 = document.getElementById("more7")
+  let btn7 = document.getElementById("btn7")
 
   if(dots7.style.display === "none"){
     dots7.style.display="inline"
     more7.style.display="none"
+    btn7.innerHTML="►  Активно применяю JavaScript и jQuery"
   } else{
       dots7.style.display="none"
       more7.style.display="inline"
+      btn7.innerHTML="►  Активно применяю JavaScript и jQuery"
   }
 }
 function readMore8(){
   let dots8 = document.getElementById("dots8")
   let more8 = document.getElementById("more8")
+  let btn8 = document.getElementById("btn8")
 
   if(dots8.style.display === "none"){
     dots8.style.display="inline"
     more8.style.display="none"
+    btn8.innerHTML="►  Если в макете присутствуют нестандартные шрифты ..."
   } else{
       dots8.style.display="none"
       more8.style.display="inline"
+      btn8.innerHTML="►  Если в макете присутствуют нестандартные шрифты ..."
   }
 }
 
 
-//Слайдер:
+function logotip(){
+  let demo = document.getElementById("demo")
+  let full = document.getElementById("full")
 
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const slides = Array.from(slider.querySelectorAll('img'));
-const slideCount = slides.length;
-let slideIndex = 0;
-
-prevButton.addEventListener('click', () => {
-  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-  slide();
-});
-
-nextButton.addEventListener('click', () => {
-  slideIndex = (slideIndex + 1) % slideCount;
-  slide();
-});
-
-const slide = () => {
-  const imageWidth = slider.clientWidth;
-  const slideOffset = -slideIndex * imageWidth;
-  slider.style.transform = `translateX(${slideOffset}px)`;
+  if(demo.style.display === "none"){
+    demo.style.display="inline"
+    full.style.display="none"
+  } else{
+      demo.style.display="none"
+      full.style.display="inline"
+  }
 }
-
-window.addEventListener('load', () => {
-  slide();
-});
