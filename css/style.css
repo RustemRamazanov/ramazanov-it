@@ -64,6 +64,7 @@ canvas{
     margin: 0;
     padding: 0;
     z-index: 1;
+    pointer-events: none;
 }
 
 .container{
@@ -247,6 +248,7 @@ h2{
     background-color: #6e6b6a;
     display: flex;
     margin-bottom: 0px;
+    z-index: 2;
 }
 
 .footer-foto img{
@@ -262,6 +264,13 @@ h2{
     color: rgb(48, 57, 158);
     margin-left: 30px;
     cursor: pointer;
+}
+
+.footer p{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(48, 57, 158);
+    margin-left: 30px;
 }
 
 .footer-info{
